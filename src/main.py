@@ -32,7 +32,7 @@ else:
 
 print("Waiting for a match to begin")
 while (running):
-    time.sleep(30)
+    time.sleep(stateInterval)
     try:
         sessionState = client.fetch_presence(client.puuid)['sessionLoopState']
         matchID = client.coregame_fetch_player()['MatchID']
